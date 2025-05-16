@@ -2,10 +2,10 @@ let loggedIn = false;
 let settingPref = false;
 let song = "";
 const songFiles = new Map([
-    ["song1", ".audio/2021--1H13.wav"],
-    ["song2", ".audio/Aftertune - Travel The World (Original Mix).wav"],
-    ["song3", ".audio/Little Sminke Pinkie.wav"],
-    ["song4", ".audio/Mystagogue.wav"]
+    ["song1", "./audio/2021--1H13.wav"],
+    ["song2", "./audio/Aftertune - Travel The World (Original Mix).wav"],
+    ["song3", "./audio/Little Sminke Pinkie.wav"],
+    ["song4", "./audio/Mystagogue.wav"]
 ])
 
 const songImgs = new Map([
@@ -47,8 +47,8 @@ function preferenceVisibility() {
 
 function updateSong(buttonid) {
     document.getElementById(buttonid).innerHTML = document.getElementById(buttonid).innerHTML;
-    let audio = document.getElementById("audioSource").src;
-    audio = songFiles.get(buttonid);
+    let audio = document.getElementById("audioSource");
+    audio.src = songFiles.get(buttonid);
     audio.load();
     document.getElementById("audioImage").src = songImgs.get(buttonid);
 }
