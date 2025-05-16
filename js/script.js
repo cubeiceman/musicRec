@@ -30,3 +30,7 @@ function preferenceVisibility() {
         document.getElementById("updatePreferences").style.visibility = "hidden";
     }
 }
+
+function updateSong(buttonid) {
+    document.getElementById(buttonid).innerHTML = document.getElementById(buttonid).innerHTML;
+}
