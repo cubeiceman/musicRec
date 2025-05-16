@@ -3,16 +3,73 @@ p {
 }
 
 .ui-body {
-    background-color: #EEE9E3;
+    background-color: #F1F1F2;
     display: grid;
     grid-template-columns: 1fr 5fr;
-    grid-template-rows: 50vh 50vh;
+    grid-template-rows: auto auto;
     height: 100vh;
+}
+
+.ui-body {
+    background-image: linear-gradient(#F6F6F6, white);
 }
 
 .ui-body > div {
     padding: 10px;
-    border-style: solid;
+}
+
+#login {
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#login > button {
+    border: solid #1995AD;
+    width: 80%;
+    height: 14%;
+    margin-bottom: 5%;
+    padding-top: 0;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.1s ease;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#login > button:hover {
+    background-color: #87C0D4;
+    box-shadow: 0 0 15px #87C0D4;
+    transform: scale(1.05);
+}
+
+#login > button:active {
+    background-color: #6BA9BC;
+    box-shadow: 0 0 5px #6BA9BC inset;
+    transform: scale(0.95);
+}
+
+#login > form {
+    width: 100%;
+    margin-top: 15px;
+    text-align: center;
+}
+
+#login > form > label {
+    display: block;
+    margin-bottom: 2%;
+    font-size: 14px;
+    color: #1995AD;
+}
+
+#login > form > textarea {
+    width: 90%;
+    border: 1px solid #1995AD;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
 }
 
 #main {
@@ -21,36 +78,109 @@ p {
     grid-column-start: 2;
 }
 
-#main > button {
-    background-color: #d3b683;
+#moodBox {
+    border-right: 1px solid #ccc;
+    margin-left: 5%;
 }
 
 #moodBox > button {
-    background-color: #f0c98d;
-    border: solid gray;
-    width: 80%;
+    border: solid #1995AD;
+    width: 87%;
     height: 14%;
     display: block;
     margin: 5px;
-    transition-duration: 0.4s;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.1s ease;
+    border-radius: 8px;
 }
 
 #moodBox > button:hover {
-    border: solid darkgray;
-    background-color: #d3b683;
-    color: black;
+    background-color: #87C0D4;
+    box-shadow: 0 0 15px #87C0D4;
+    transform: scale(1.05);
+}
+
+#moodBox > button:active {
+    background-color: #6BA9BC;
+    box-shadow: 0 0 5px #6BA9BC inset;
+    transform: scale(0.95);
+}
+
+#songChoice {
+    height: 47%;
 }
 
 #songSamples {
-    background-color: #D3B683;
-    padding: 1%;
-    border: solid black;
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: auto auto auto auto;
 }
 
 #songSamples > button {
-    margin: 3%;
-    padding-top: 100%;
+    margin-left: 3%;
+    padding-top: 70%;
     font-size: 40px;
+    border: solid #1995AD;
+    width: 80%;
+    height: 14%;
+    display: block;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.1s ease;
+    border-radius: 8px;
+}
+
+#songSamples > button:hover {
+    background-color: #87C0D4;
+    box-shadow: 0 0 15px #87C0D4;
+    transform: scale(1.02);
+}
+
+#songSamples > button:active {
+    background-color: #6BA9BC;
+    box-shadow: 0 0 5px #6BA9BC inset;
+    transform: scale(0.98);
+}
+
+#playing {
+    padding-top: 0;
+}
+
+#playingName {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: left;
+    justify-content: left;
+    background-color: #F9F9F9;
+    border: solid #1995AD;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+}
+
+#playingName audio {
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 6%;
+    width: 70%;
+    outline: none;
+    background-color: #F1F1F2;
+    border: 1px solid #1995AD;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#playingName audio:focus {
+    box-shadow: 0 0 10px #1995AD;
+    transition: box-shadow 0.3s ease;
+}
+
+#playingName > div {
+    display: flex;
+    width: 25%;
+    height: 100%;
+}
+
+#playingName > div > img {
+    width: 220px;
+    height: 220px;
+    border-radius: 10px;
 }
