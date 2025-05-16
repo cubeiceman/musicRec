@@ -11,28 +11,35 @@
 <body>
     <div class="ui-body">
         <!--ACCOUNT BOX-->
-        <div>
+        <div id="login">
             <button id="user" onclick="updateUser()">not logged in!</button>
             <button id="preferences" onclick="preferenceVisibility()">Update your preferences</button>
             <form id="updatePreferences">
                 <label for="wants">Update this textbox to update your preferences:</label>
-                <input type="text" id="wants" name="wants">
+                <textarea id="wants" name="wants" rows="5" cols="50"></textarea>
             </form>
         </div>
         <!--MAIN AREA-->
         <div id="main">
-            <h3>Welcome, User!</h3>
             <div id="songChoice">
+                <h2>Welcome, User!</h2>
                 <div id="songSamples">
-                    <button>song1</button>
-                    <button>song1</button>
-                    <button>song1</button>
-                    <button>song1</button>
-                    <button>song1</button>
+                    <button id="song1" onclick="updateSong(this.id)">song 1</button>
+                    <button id="song2" onclick="updateSong(this.id)">song 2</button>
+                    <button id="song3" onclick="updateSong(this.id)">song 3</button>
+                    <button id="song4" onclick="updateSong(this.id)">song 4</button>
                 </div>
             </div>
             <div id="playing">
-                <h3>Playing Right Now:</h3>
+                <h3>Playing Right Now: Travel The World (Original Mix)</h3> <!--insert song name-->
+                <div id="playingName">
+                    <audio controls>
+                        <source src="../audio/Aftertune - Travel The World (Original Mix).wav" type="audio/wav">
+                    </audio>
+                    <div>
+                        <img src="../images/test.png" alt="testing!">
+                    </div>
+                </div>
             </div>
         </div>
         <!--USER PICKS A MOOD-->
