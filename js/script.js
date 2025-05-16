@@ -47,8 +47,7 @@ function preferenceVisibility() {
 
 function updateSong(buttonid) {
     document.getElementById(buttonid).innerHTML = document.getElementById(buttonid).innerHTML;
-    let audio = document.getElementById("audioSource");
-    audio.src = songFiles.get(buttonid);
-    audio.load();
+    document.getElementById("audioSource").src = songFiles.get(buttonid);
+    document.getElementById("audioControl").load();
     document.getElementById("audioImage").src = songImgs.get(buttonid);
 }
