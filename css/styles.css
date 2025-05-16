@@ -185,20 +185,24 @@ p {
 
 #song1 {
     background-image: url(../images/song1.png);
-    background-size: 230px 230px;    
+    background-size: 250px 250px;
+    background-repeat: no-repeat;
 }
 
 #song2 {
     background-image: url(../images/song2.png);
-    background-size: 230px 230px;
+    background-size: 250px 250px;
+    background-repeat: no-repeat;
 }
 
 #song3 {
     background-image: url(../images/song3.png);
-    background-size: 230px 230px;
+    background-size: 250px 250px;
+    background-repeat: no-repeat;
 }
 
 #song4 {
     background-image: url(../images/song4.png);
-    background-size: 230px 230px;
+    background-size: 250px 250px;
+    background-repeat: no-repeat;
 }
