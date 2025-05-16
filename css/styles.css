@@ -122,18 +122,16 @@ p {
     width: 80%;
     height: 14%;
     display: block;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.1s ease;
+    transition: box-shadow 0.3s ease, transform 0.1s ease;
     border-radius: 8px;
 }
 
 #songSamples > button:hover {
-    background-color: #87C0D4;
     box-shadow: 0 0 15px #87C0D4;
     transform: scale(1.02);
 }
 
 #songSamples > button:active {
-    background-color: #6BA9BC;
     box-shadow: 0 0 5px #6BA9BC inset;
     transform: scale(0.98);
 }
@@ -183,4 +181,24 @@ p {
     width: 220px;
     height: 220px;
     border-radius: 10px;
+}
+
+#song1 {
+    background-image: url(../images/song1.png);
+    background-size: 230px 230px;    
+}
+
+#song2 {
+    background-image: url(../images/song2.png);
+    background-size: 230px 230px;
+}
+
+#song3 {
+    background-image: url(../images/song3.png);
+    background-size: 230px 230px;
+}
+
+#song4 {
+    background-image: url(../images/song4.png);
+    background-size: 230px 230px;
 }
