@@ -15,6 +15,13 @@ const songImgs = new Map([
     ["song4", "./images/song4.png"]
 ])
 
+const songNames = new Map([
+    ["song1", "2021--1H13"],
+    ["song2", "Aftertune - Travel The World (Original Mix)"],
+    ["song3", "Little Sminke Pinkie"],
+    ["song4", "Mystagogue"]
+])
+
 document.getElementById("updatePreferences").style.visibility = "hidden";
 document.getElementById("preferences").style.visibility = "hidden";
 
@@ -46,8 +53,9 @@ function preferenceVisibility() {
 }
 
 function updateSong(buttonid) {
-    document.getElementById(buttonid).innerHTML = document.getElementById(buttonid).innerHTML;
     document.getElementById("audioSource").src = songFiles.get(buttonid);
     document.getElementById("audioControl").load();
     document.getElementById("audioImage").src = songImgs.get(buttonid);
+    document.getElementById("audioControl").play();
+    document.getElementById("songName").innerHTML = "Playing Right Now: " + songNames.get(buttonid);
 }
