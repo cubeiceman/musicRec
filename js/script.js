@@ -59,3 +59,47 @@ function updateSong(buttonid) {
     document.getElementById("audioControl").play();
     document.getElementById("songName").innerHTML = "Playing Right Now: " + songNames.get(buttonid);
 }
+
+
+/*-------------------------------------------------------------------------------------------------------------*/
+
+
+async function getMusicRecommendation(description) {
+  try {
+    // Replace with the full URL if calling from a different domain
+    const response = await fetch('http://localhost:9004/api/recommend', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ musicDescription: description }),
+    });
+
+    if (!response.ok) {
+      // Handle HTTP errors
+      const errorData = await response.json();
+      console.error('Error from API:', response.status, errorData);
+      throw new Error(`API Error: ${response.status} ${errorData.details || response.statusText}`);
+    }
+
+    const data = await response.json();
+    console.log('Recommendation:', data.recommendation);
+    return data.recommendation;
+
+  } catch (error) {
+    console.error('Failed to send request or parse response:', error);
+    // Handle other errors (e.g., network issues)
+    throw error;
+  }
+}
+
+function getRec(description) {
+    getMusicRecommendation(description).then(recommendation => {
+    // Do something with the recommendation, e.g., display it on your page
+    alert(`Suggested for you: ${recommendation}`);
+  })
+  .catch(error => {
+    // Handle any errors that occurred during the process
+    alert(`Could not get recommendation: ${error.message}`);
+  });
+}
